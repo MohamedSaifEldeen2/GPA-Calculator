@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image:url(Images/pattern-back-school-education-with-modern-thin-line-icons-school-supplies-white-background_650776-88.webp) ;
+
+    
+}
+.home{
+    width: 75%;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 20px 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.title{
+    text-align: center;
+    padding-top: 20px;
+}
+.title h1{
+    font-size: 50px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande","Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: #4CAF50;;    
+}
+
+
+.title h1:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #4CAF50;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.result{
+  position: relative;
+  left:0;
+  right: 0;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.totalGPA, .totalHours{
+  text-align: center;
+  border: 2px solid #4CAF50;
+  border-radius: 5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 0rem 0rem 1rem 1rem ;
+}
+
+.TH, .TG{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  margin-right: 2rem;
+}
+
+.totalGPAL, .totalHoursL{
+  padding-bottom: 5px;
+  padding-left: 1rem;
+  font-weight: bolder;
+}
+
+.tabel{
+    width: 100%;
+    max-height: 310px; 
+    overflow: auto;
+}
+.myTable {
+    border-collapse: collapse;
+    width: 100%;
+    overflow: auto;
+}
+.myTable thead{
+    position: sticky;
+    top: 0;
+}
+
+
+.myTable td, .myTable th {
+    padding: 8px;
+    text-align: center;
+}
+
+.myTable tr:nth-child(even){background-color: #f2f2f2;}
+
+.myTable tr:hover {background-color: #ddd;}
+
+.myTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bolder;
+    background-color: #4CAF50;
+    color: white;
+}
+.hours , .grade, .course{
+    text-align: center;
+    width: 75%;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.Buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    position: relative;
+  }
+
+  .AddRow {
+    background-color: #4CAF50;
+  }
+  .AddRow:hover{
+    background-color: #00ff00;
+  }
+
+  .deletRow {
+    background-color: #d24646;
+  }
+  .deletRow:hover{
+    background-color: #ff0000;
+  }
+  .clear{
+    background-color: rgb(218, 218, 44);
+  }
+    .clear:hover{
+        background-color: rgb(255, 255, 0);
+    }
+
+  .button:hover {
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+
+  }
+
+  .button:active {
+    transform: scale(1);
+  }
+
+  .tooltip {
+    visibility: hidden;
+    width: 100px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    margin-left: -50px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  input,select:focus {
+    outline-color: lightslategray;
+  }
+
+  
+  @media screen and (max-width: 768px) {
+    .parent {
+      flex-direction: column;
+    }
+    .home {
+      width: 90%;
+    }
+    .title h1 {
+      font-size: 40px;
+    }
+    .result {
+      flex-direction: row;
+      height: 100px;
+    }
+    .totalGPA, .totalHours {
+      margin: 0rem 0rem 1rem 0rem;
+      width: 100%;
+    }
+    .TH, .TG {
+      margin-right: 1rem;
+    }
+    .tabel {
+      max-height: 200px;
+    }
+    .myTable th {
+      font-size: 18px;
+    }
+    .hours, .grade, .course {
+      width: 100%;
+    }
+    .Buttons {
+      flex-direction: row;
+      margin-top: 20px;
+    }
+    .button {
+      margin-bottom: 10px;
+    }
+  }

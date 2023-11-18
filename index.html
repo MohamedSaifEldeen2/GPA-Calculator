@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA-Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/gpa.png">
+</head>
+
+<body>
+
+   <div  class="parent">
+    <div class="home">
+        <div class="title">
+            <h1>GPA Calculator</h1>
+            
+        </div>
+        <div class="result">
+            <div class="TH">
+                <label for="totalHours" class="totalHoursL">Total Hours</label>
+                <input type="text" class="totalHours" placeholder="Hours" id="totalHours"  readonly>
+            </div>
+            <div class="TG">
+                <label for="gpa" class="totalGPAL">Total GPA</label>
+                <input type="text" class="totalGPA" placeholder="GPA" id="gpa" readonly>
+            </div>
+        </div>
+        <div class="tabel">
+            <table class="myTable">
+                <thead>
+                <tr>
+                    <th>#</th> 
+                    <th>Course Name</th>
+                    <th>Credit Hours</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td> 
+                    <td><input type="text" class="course" name="course"  id="course"></td>
+                    <td>
+                        <select class="hours" name="hours" onchange="calculateTotalHours(); calculateGPA();" id="hours">
+                            <option value=""></option>
+                            <option value="0">0</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="6">6</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="grade" class="grade" onchange="calculateGPA()" id="grade">
+                            <option value=""></option>
+                            <option value="4">A+</option>
+                            <option value="3.7">A</option>
+                            <option value="3.3">B+</option>
+                            <option value="3">B</option>
+                            <option value="2.7">C+</option>
+                            <option value="2.3">C</option>
+                            <option value="2">D+</option>
+                            <option value="1.7">D</option>
+                            <option value="0">F</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td> 
+                    <td><input type="text" class="course" name="course" id="course"></td>
+                    <td>
+                        <select class="hours" name="hours" onchange="calculateTotalHours(); calculateGPA();" id="hours">
+                            <option value=""></option>
+                            <option value="0">0</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="6">6</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="grade" class="grade" onchange="calculateGPA()" id="grade">
+                            <option value=""></option>
+                            <option value="4">A+</option>
+                            <option value="3.7">A</option>
+                            <option value="3.3">B+</option>
+                            <option value="3">B</option>
+                            <option value="2.7">C+</option>
+                            <option value="2.3">C</option>
+                            <option value="2">D+</option>
+                            <option value="1.7">D</option>
+                            <option value="0">F</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td> 
+                    <td><input type="text" class="course" name="course" id="course"></td>
+                    <td>
+                        <select class="hours" name="hours" onchange="calculateTotalHours(); calculateGPA();" id="hours">
+                            <option value=""></option>
+                            <option value="0">0</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="6">6</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="grade" class="grade" onchange="calculateGPA()" id="grade">
+                            <option value=""></option>
+                            <option value="4">A+</option>
+                            <option value="3.7">A</option>
+                            <option value="3.3">B+</option>
+                            <option value="3">B</option>
+                            <option value="2.7">C+</option>
+                            <option value="2.3">C</option>
+                            <option value="2">D+</option>
+                            <option value="1.7">D</option>
+                            <option value="0">F</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td> 
+                    <td><input type="text" class="course" name="course" id="course"></td>
+                    <td>
+                        <select class="hours" name="hours" onchange="calculateTotalHours(); calculateGPA();" id="hours">
+                            <option value=""></option>
+                            <option value="0">0</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="6">6</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="grade" class="grade" onchange="calculateGPA()" id="grade">
+                            <option value=""></option>
+                            <option value="4">A+</option>
+                            <option value="3.7">A</option>
+                            <option value="3.3">B+</option>
+                            <option value="3">B</option>
+                            <option value="2.7">C+</option>
+                            <option value="2.3">C</option>
+                            <option value="2">D+</option>
+                            <option value="1.7">D</option>
+                            <option value="0">F</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td> 
+                    <td><input type="text" class="course" name="course" id="course"></td>
+                    <td>
+                        <select class="hours" name="hours" onchange="calculateTotalHours(); calculateGPA();" id="hours">
+                            <option value=""></option>
+                            <option value="0">0</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="6">6</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="grade" class="grade" onchange="calculateGPA()" id="grade">
+                            <option value=""></option>
+                            <option value="4">A+</option>
+                            <option value="3.7">A</option>
+                            <option value="3.3">B+</option>
+                            <option value="3">B</option>
+                            <option value="2.7">C+</option>
+                            <option value="2.3">C</option>
+                            <option value="2">D+</option>
+                            <option value="1.7">D</option>
+                            <option value="0">F</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+        <div class="Buttons">
+            <div class="button AddRow" onclick="addRow()">
+              +
+              <div class="tooltip">Add Course</div>
+            </div>
+            <div class="button deletRow" onclick="deleteRow()">
+              -
+              <div class="tooltip">Delete Course</div>
+            </div>
+            <div class="button clear" onclick="clearInputs()">
+                &#x21bb;
+              <div class="tooltip">Clear Inputs</div>
+            </div>
+    </div>
+   </div>
+   </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
